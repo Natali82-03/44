@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import chardet
 
+# Настройка макета страницы ДО всех других элементов
+st.set_page_config(layout="wide")
+
 # Улучшенная функция загрузки данных
 @st.cache_data
 def load_data(file_name):
@@ -24,6 +27,8 @@ def load_data(file_name):
     else:
         st.error(f"В файле {file_name} отсутствует столбец 'Name'")
     return df
+
+# Остальной код без изменений...
 
 # Загрузка данных
 try:
